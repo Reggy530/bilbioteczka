@@ -28,7 +28,6 @@ def home():
     if request.method == "POST":
         pass
     books = Book.query.all()
-
     return render_template("index.html", books=books)
 
 
