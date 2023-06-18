@@ -41,7 +41,7 @@ def delete(id):
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
         connection.login(user=my_email, password=password)
-        connection.sendmail(from_addr=my_email, to_addrs="reggy530@gmail.com",
+        connection.sendmail(from_addr=my_email, to_addrs="pawello454@gmail.com",
                             msg=f"Subject:O kurdebele! Usunieto ksiazke. :( \n\nO nie!")
     book = Book.query.get(id)
     db.session.delete(book)
@@ -56,7 +56,7 @@ def add():
         with smtplib.SMTP("smtp.gmail.com", 587) as connection:
             connection.starttls()
             connection.login(user=my_email, password=password)
-            connection.sendmail(from_addr=my_email, to_addrs="reggy530@gmail.com",
+            connection.sendmail(from_addr=my_email, to_addrs="pawello454@gmail.com",
                                 msg=f"Subject:Dodano nowa ksiazke\n\nDodano nowa ksiazke. Sprawdz jaka. :) :) :)")
         bookname = request.form.get("name")
         bookauthor = request.form.get("author")
@@ -76,7 +76,7 @@ def edit(id):
         with smtplib.SMTP("smtp.gmail.com", 587) as connection:
             connection.starttls()
             connection.login(user=my_email, password=password)
-            connection.sendmail(from_addr=my_email, to_addrs="reggy530@gmail.com",
+            connection.sendmail(from_addr=my_email, to_addrs="pawello454@gmail.com",
                                 msg=f"Subject:Edytowano rating\n\nEdytowano rating dla ksiazki :) :) :)")
         newrating = request.form.get("rating")
         book = Book.query.get(id) #ogarnięcie konkretnej książki po jego ID
