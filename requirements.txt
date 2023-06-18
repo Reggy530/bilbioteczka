@@ -6,3 +6,4 @@ SQLAlchemy==1.4.22
 Flask-SQLAlchemy==3.0.3
 gunicorn==20.1.0
 MarkupSafe==1.1.1
+
